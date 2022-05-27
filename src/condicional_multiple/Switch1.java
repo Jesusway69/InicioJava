@@ -19,6 +19,8 @@ public class Switch1 {
             case "domingo": numero = 7; break;
             default: System.out.println("ENTRADA INCORRECTA");
         }
-        System.out.println("Número: " + numero);
+        if(numero > 0) {
+           System.out.println("Número: " + numero);
+        }
     }
 }

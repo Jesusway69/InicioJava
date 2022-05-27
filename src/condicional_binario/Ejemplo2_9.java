@@ -1,4 +1,4 @@
-package ifthenelse;
+package condicional_binario;
 
 import java.util.Scanner;
 
