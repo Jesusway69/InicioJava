@@ -10,6 +10,7 @@ MATRIZ
     7. A partir del 6 mostrar sólo las diagonales del cuadrado es decir una X.
 
 CONDICIONAL MULTIPLE
+
     1. Identificar mediante la cadena del día de la semana a que número de día le corresponde, por ejemplo lunes --> 1,  ... domingo ---> 7
     2.
     3. Identificar cuantos días tiene un mes de año ingresando el número del mes  
