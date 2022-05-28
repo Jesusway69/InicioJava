@@ -1,7 +1,7 @@
 # INDEX
 
 MATRIZ
-    1.
+1. Declarar y llenar una matriz manualmente
     2.
     3.
     4.
