@@ -6,16 +6,16 @@
 3. Declarar y llenar una matriz de enteros con columnas variables manualmente. 
 4. Construir un triangulo de asteriscos donde la base tiene 10 asteriscos y va disminuyendo hacia arriba hasta llegar a un asterisco.  
 
-         *
-        * *
-       * * *
-      * * * *
-     * * * * *
-    * * * * * *
-   * * * * * * *
-  * * * * * * * *
- * * * * * * * * *
-* * * * * * * * * *
+         *  
+        * *  
+       * * *  
+      * * * *  
+     * * * * *  
+    * * * * * *  
+   * * * * * * *  
+  * * * * * * * *  
+ * * * * * * * * *  
+* * * * * * * * * *    
 
 5. Otra forma de hacer a la pregunta 4.  
 6. Constuir un cuadrado con asteriscos, el programa pide de cuantos asteriscos estará formado el lado del cuadrado.
