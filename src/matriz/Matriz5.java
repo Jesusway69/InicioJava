@@ -7,15 +7,12 @@ public class Matriz5 {
             for (int c = 1; c <= f; c++) {
                 if (c == 1) {
                     for (int e = 11; e > f * c; e = e - 1) {
-                        System.out.print(" ");//
+                        System.out.print(" ");
                     }
                 }
                 System.out.print("* ");
             }
             System.out.println();
         }
-        System.out.println();
-
     }
-
 }
