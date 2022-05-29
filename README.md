@@ -21,7 +21,7 @@
 6. Constuir un cuadrado con asteriscos, el programa pide de cuantos asteriscos estará formado el lado del cuadrado.
 7. A partir de la pregunta 6 mostrar sólo las diagonales del cuadrado es decir una X.  
 
-CONDICIONAL MULTIPLE
+### CONDICIONAL MULTIPLE
 
     1. Identificar mediante la cadena del día de la semana a que número de día le corresponde, por ejemplo lunes --> 1,  ... domingo ---> 7
     2.
