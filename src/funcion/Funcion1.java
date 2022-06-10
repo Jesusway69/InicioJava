@@ -3,6 +3,7 @@ package funcion;
 import java.util.Scanner;
 import libreria.MiFunciones;
 
+
 public class Funcion1 {
 
     public static void main(String[] args) {
