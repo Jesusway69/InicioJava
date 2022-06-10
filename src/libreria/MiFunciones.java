@@ -50,6 +50,10 @@ public class MiFunciones {
         return (int) (Math.random() * 100 + 1);
     }
 
+    public static int aleatorio() { //[1,100]  
+        return (int) (Math.random() * 100 + 1);
+    }
+
     public static double[] retornaVectorF(int[] vectorC) {
         double[] vectorF = new double[vectorC.length];
         for (int i = 0; i < vectorC.length; i++) {
