@@ -43,3 +43,13 @@
        Noviembre  11      ---> 30
        Diciembre  12      ---> 31
     4. Identificar si un caracter ingresado por teclado es vocal o consonante
+
+### EXPRESION REGULAR
+
+1. Crear una expresión regular para validar cadenas que solo representen un digito.  
+2. Crear una expresión regular para validar cadenas que representa estaturas de una persona (números de punto flotante).  
+3. Crear una expresión regular para validar cadenas que representa el nombre de una persona (alfanumerico).
+4. Crear una expresión regular para validar cadenas que solo representen uno o mas ñ.
+5. Crear expresiones regulares que me permita a partir de una oración ingresada por teclado, cuantas letras, digitos y otros tiene dicha oración.  
+6. Crear expresiones regulares que me permita a partir de una oración ingresada por teclado, cuantas volcas, consonantes y otros tiene dicha oración.  
+

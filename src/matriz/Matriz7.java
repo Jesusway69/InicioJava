@@ -8,27 +8,29 @@ public class Matriz7 {
         Scanner sc = new Scanner(System.in);
         System.out.print("Ingresar número de asteriscos que tendra el lado de un cuadrado? ");
         int n = sc.nextInt();
-        int k = (n - 1);
-        int m = 0;
-        int h = (n / 2) + 1;
+        int x = 0;
+        int y = 0;
+        int z = n;
         for (int i = 1; i <= n; i++) {
-            m = i + k;
             for (int j = 1; j <= n; j++) {
                 if (i == j) {
-                    System.out.print("*");
-                    //m = j + k;
+                    x = j - 1;
+                    for (int k = 0; k < x; k++) {
+                        System.out.print(" ");
+                    }
+                    System.out.print("X");
+                    y = z - j;
+                    for (int l = 1; l <= y; l++) {
+                        System.out.print(" ");
+                    }
+                    System.out.print("X");
+                    break;
                 } else {
                     System.out.print(" ");
                 }
-                if (j == m && i != h && j != h) {
-                    System.out.print("*");
-                } else {
-                    System.out.print(" ");
-                }
+
             }
-            k = k - 2;
             System.out.println();
         }
     }
-
 }
