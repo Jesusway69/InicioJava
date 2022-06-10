@@ -8,7 +8,7 @@ public class Funcion3 {
 
         int[][] matrizC = new int[3][4];
 
-        //VECTOR C
+        //MATRIZ C
         for (int f = 0; f < matrizC.length; f++) {
             for (int c = 0; c < matrizC[0].length; c++) {
                 matrizC[f][c] = MiFunciones.retornaGradoCentigradoAleatorio();
@@ -18,7 +18,7 @@ public class Funcion3 {
         }
 
         System.out.println("MATRIZ F");
-        //VECTOR F
+        //MATRIZ F
         double[][] matrizF = MiFunciones.retornaMatrizF(matrizC);
 
         for (int f = 0; f < matrizC.length; f++) {
