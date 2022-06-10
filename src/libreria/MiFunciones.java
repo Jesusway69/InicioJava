@@ -40,6 +40,13 @@ public class MiFunciones {
         return vectorF;
     }
     
-    
-
+    public static double[][] retornaMatrizF(int[][] matrizC) {
+        double[][] matrizF = new double[matrizC.length][matrizC[0].length];
+        for(int f=0; f<matrizC.length; f++) {
+            for(int c=0; c<matrizC[0].length; c++) {
+               matrizF[f][c] =  convertirCF(matrizC[f][c]);
+            }
+        }
+        return matrizF;
+    }
 }
