@@ -1,10 +1,11 @@
-package funcion;
+package clase_circulo;
 
 public class Circulo {
 
-    //ATRIBUTO
-    double radio;
+    //(1) VARIABLES DE INSTANCIA
+    private double radio;
 
+    //(2) CONSTRUCTORES
     public Circulo() {
     }
 
@@ -12,6 +13,7 @@ public class Circulo {
         this.radio = radio;
     }
 
+    //(3) METODOS SET Y GET
     public double getRadio() {
         return radio;
     }
@@ -20,11 +22,13 @@ public class Circulo {
         this.radio = radio;
     }
 
+    //(4) MOSTRAR EL VALOR DE TODAS LAS VARIABLES DE INSTANCIA
     @Override
     public String toString() {
         return "Circulo{" + "radio=" + radio + '}';
     }
 
+    //(5) METODOS OTROS
     public double perimetro() {
         return 2 * Math.PI * this.radio;
     }

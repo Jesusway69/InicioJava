@@ -1,6 +1,6 @@
 package funcion;
 
-import libreria.MiFunciones;
+import libreria.MisMetodos;
 
 public class Funcion3 {
 
@@ -11,7 +11,7 @@ public class Funcion3 {
         //MATRIZ C
         for (int f = 0; f < matrizC.length; f++) {
             for (int c = 0; c < matrizC[0].length; c++) {
-                matrizC[f][c] = MiFunciones.retornaGradoCentigradoAleatorio();
+                matrizC[f][c] = MisMetodos.retornaGradoCentigradoAleatorio1_100();
                 System.out.printf("%5d  ", matrizC[f][c]);
             }
             System.out.println();
@@ -19,7 +19,7 @@ public class Funcion3 {
 
         System.out.println("MATRIZ F");
         //MATRIZ F
-        double[][] matrizF = MiFunciones.retornaMatrizF(matrizC);
+        double[][] matrizF = MisMetodos.retornaMatrizF(matrizC);
 
         for (int f = 0; f < matrizC.length; f++) {
             for (int c = 0; c < matrizC[0].length; c++) {

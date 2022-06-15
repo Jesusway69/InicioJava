@@ -1,16 +1,14 @@
-package funcion;
+package clase_circulo;
 
-import java.util.Scanner;
-import libreria.MiFunciones;
-
-public class Funcion4 {
+public class PrincipalCirculo1 {
 
     public static void main(String[] args) {
        
         Circulo c = new Circulo(10);
         
+        System.out.println("Radio    : " + c.getRadio());
         System.out.println("Perimetro: " + c.perimetro());
-        System.out.println("Area: " + c.area());
+        System.out.println("Area     : " + c.area());
     }
     
 }

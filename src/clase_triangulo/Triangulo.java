@@ -1,4 +1,4 @@
-package funcion;
+package clase_triangulo;
 
 public class Triangulo {
 
