@@ -64,7 +64,16 @@ public class MisEjercicios {
         System.out.println("Cantidad en kilos de Gamba: " + kilosGamba + " Kilos");
         System.out.println("Costo de Arroz: " + costoArroz + " \u20AC");
         System.out.println("Costo de Gamba: " + costoGamba + " \u20AC");
-        
+    }
+    
+    public static void ejercicio14() {
+        //ENTRADA
+        double precioPagado = Entrada.entradaPrecio("Pagado");
+        double precioTarifa = Entrada.entradaPrecio("Tarifa");
+        //CALCULO
+        double descuento = (1 - (precioPagado/precioTarifa))*100;
+        //SALIDA
+        System.out.println("Descuento : " + descuento + "%");
     }
 
 }

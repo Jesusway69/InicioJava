@@ -39,4 +39,22 @@ public class Entrada {
         dprecioxkilo = Double.parseDouble(sprecioxkilo);
         return dprecioxkilo;
     }
+    
+    public static double entradaPrecio(String cadena) {
+        Scanner sc = new Scanner(System.in);
+        String er = "([0-9]+\\.[0-9]+)||[0-9]+";
+        String sprecioxkilo;
+        double dprecioxkilo;
+        boolean correcto;
+        do {
+            System.out.print("Ingrese precio " + cadena + "? ");
+            sprecioxkilo = sc.next();
+            correcto = sprecioxkilo.matches(er);
+            if (!correcto) {
+                System.out.println("Error vuelva a ingresar el dato");
+            }
+        } while (!correcto);
+        dprecioxkilo = Double.parseDouble(sprecioxkilo);
+        return dprecioxkilo;
+    }
 }
