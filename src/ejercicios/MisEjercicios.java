@@ -3,29 +3,65 @@ package ejercicios;
 import java.util.*;
 
 public class MisEjercicios {
-    
+
     public static void ejercicio13_1() {
-        //ENTRADA
-        for(int i=0; i<2; i++) {
-            System.out.println("Producto " + (i+1) + ":");
-            int cantidadCajas = Entrada.entradaCantidadPersonas();
-            int unidadesxCaja = Entrada.entradaCantidadPersonas();
-            double precioxCaja = Entrada.entradaPrecio("Caja");
-            Ejercicio13_1 objeto = new Ejercicio13_1(cantidadCajas,unidadesxCaja,precioxCaja);
-            double[] v = objeto.getCalculoAtributos();
-            System.out.println(v[0]);
+        List<Ejercicio13_1> lineasfacturas_al = new ArrayList<Ejercicio13_1>();
+        for (int i = 0; i < 2; i++) {
+            System.out.println("Producto " + (i + 1) + ":");
+            int cantidadCajas = Entrada.entradaNumeroEntero("Ingrese número de cajas? ");
+            int unidadesxCaja = Entrada.entradaNumeroEntero("Ingrese unidades por caja? ");
+            double precioxUnidad = Entrada.entradaNumeroReal("Ingrese precio por unidad? ");
+            Ejercicio13_1 objeto = new Ejercicio13_1(cantidadCajas, unidadesxCaja, precioxUnidad);
+            lineasfacturas_al.add(objeto);
         }
-        
-        //CALCULO
-        
-        
-        //SALIDA
+
+        System.out.printf("%10s%10s%15s%15s%10s%10s%10s\n", "N", "CAJAS", "UNIDADES/CAJA", "PRECION/UNIDAD", "IMPORTE", "IVA(21%)", "TOTAL");
+        System.out.printf("%10s%10s%15s%15s%10s%10s%10s\n", "-", "-----", "-------------", "--------------", "-------", "--------", "-----");
+        for (int i = 0; i < lineasfacturas_al.size(); i++) {
+            Ejercicio13_1 objeto = lineasfacturas_al.get(i);
+            double[] v = objeto.getCalculoAtributos();
+            System.out.printf("%10d%10d%15d%15.2f%10.2f%10.2f%10.2f\n",
+                    (i + 1),
+                    objeto.getCantidadCajas(),
+                    objeto.getUnidadesxCaja(),
+                    objeto.getPrecioUnidad(),
+                    v[0],
+                    (v[1] - v[0]),
+                    v[1]);
+        }
+    }
+    
+    public static void ejercicio13_2() {
+        List<Ejercicio13_1> lineasfacturas_al = new ArrayList<Ejercicio13_1>();
+        for (int i = 0; i < 2; i++) {
+            System.out.println("Producto " + (i + 1) + ":");
+            int cantidadCajas = Entrada.entradaNumeroEntero("Ingrese número de cajas? ");
+            int unidadesxCaja = Entrada.entradaNumeroEntero("Ingrese unidades por caja? ");
+            double precioxUnidad = Entrada.entradaNumeroReal("Ingrese precio por unidad? ");
+            Ejercicio13_1 objeto = new Ejercicio13_1(cantidadCajas, unidadesxCaja, precioxUnidad);
+            lineasfacturas_al.add(objeto);
+        }
+
+        System.out.printf("%10s%10s%15s%15s%10s%10s%10s\n", "N", "CAJAS", "UNIDADES/CAJA", "PRECION/UNIDAD", "IMPORTE", "IVA(21%)", "TOTAL");
+        System.out.printf("%10s%10s%15s%15s%10s%10s%10s\n", "-", "-----", "-------------", "--------------", "-------", "--------", "-----");
+        for (int i = 0; i < lineasfacturas_al.size(); i++) {
+            Ejercicio13_1 objeto = lineasfacturas_al.get(i);
+            Retorno r = objeto.getCalculoAtributos1();
+            System.out.printf("%10d%10d%15d%15.2f%10.2f%10.2f%10.2f\n",
+                    (i + 1),
+                    objeto.getCantidadCajas(),
+                    objeto.getUnidadesxCaja(),
+                    objeto.getPrecioUnidad(),
+                    r.importe,
+                    (r.total - r.importe),
+                    r.total);
+        }
     }
 
     public static void ejercicio14() {
         //ENTRADA
-        double precioPagado = Entrada.entradaPrecio("Pagado");
-        double precioTarifa = Entrada.entradaPrecio("Tarifa");
+        double precioPagado = Entrada.entradaNumeroReal("Ingrese precio pagado? ");
+        double precioTarifa = Entrada.entradaNumeroReal("Ingrese precio tarifa? ");
         //CALCULO
         double descuento = (1 - (precioPagado / precioTarifa)) * 100;
         //SALIDA
@@ -50,9 +86,8 @@ public class MisEjercicios {
     }
 
     public static void ejercicio15_2() {
-        
+
         List<Ejercicio15_2> comensales_al = new ArrayList<Ejercicio15_2>();
-   
 
         for (int i = 0; i < 2; i++) {
             System.out.println("COMENSAL " + (i + 1) + ":");
@@ -62,8 +97,7 @@ public class MisEjercicios {
             objeto.setPrecioxkiloGamba(Entrada.entradaPrecioxkilo("Gamba"));
             comensales_al.add(objeto);
         }
-            
-        
+
         System.out.printf("%10s%10s%10s%10s%10s%10s%10s%10s\n", "N", "CANT PERS", "PXKA", "PXKG", "CANT KA", "CANT KG", "COSTO A", "COSTO G");
         System.out.printf("%10s%10s%10s%10s%10s%10s%10s%10s\n", "-", "---------", "----", "----", "-------", "-------", "-------", "-------");
         for (int i = 0; i < comensales_al.size(); i++) {

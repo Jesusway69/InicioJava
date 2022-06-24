@@ -14,7 +14,7 @@ public class Principal {
        x1 = new HashSet<Ejercicio15_2>();
        x1 = new LinkedHashSet<Ejercicio15_2>();
         */
-       MisEjercicios.ejercicio13_1();
+       MisEjercicios.ejercicio13_2();
     }
 
 }
