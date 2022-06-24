@@ -4,6 +4,25 @@ import java.util.*;
 
 public class MisEjercicios {
 
+    public static void ejercicio12_1() {
+        List<Ejercicio12_1> objetos_al = new ArrayList<Ejercicio12_1>();
+        //ENTRADA
+        for (int i = 0; i < 100; i++) {
+            int aleatorio = (int) (Math.random() * 7001 + 3000); //[3000, 10000]
+            Ejercicio12_1 objeto = new Ejercicio12_1(aleatorio);
+            objetos_al.add(objeto);
+        }
+        //RESULTADO
+        System.out.printf("%4s%18s%10s%10s%10s\n", "N", "CANTIDAD SEGUNDOS", "HORAS", "MINUTOS", "SEGUNDOS");
+        System.out.printf("%4s%18s%10s%10s%10s\n", "-", "-----------------", "-----", "-------", "--------");
+        for (int i = 0; i < 100; i++) {
+            Ejercicio12_1 objeto = objetos_al.get(i);
+            int[] v = objeto.getCalculoAtributos();
+            System.out.printf("%4d%18d%10d%10d%10d\n", (i + 1), objeto.getCantidadSegundos(),
+                    v[0], v[1], v[2]);
+        }
+    }
+
     public static void ejercicio13_1() {
         List<Ejercicio13_1> lineasfacturas_al = new ArrayList<Ejercicio13_1>();
         for (int i = 0; i < 2; i++) {
@@ -30,7 +49,7 @@ public class MisEjercicios {
                     v[1]);
         }
     }
-    
+
     public static void ejercicio13_2() {
         List<Ejercicio13_1> lineasfacturas_al = new ArrayList<Ejercicio13_1>();
         for (int i = 0; i < 2; i++) {
