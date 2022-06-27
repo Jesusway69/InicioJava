@@ -10,8 +10,7 @@ public class Principal {
            Alumno a = alumnos_al.get(i);
            System.out.println(a);
        }
-       
-       
+
     }
 
 }

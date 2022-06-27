@@ -22,8 +22,8 @@ public class MetodosArchivosTexto {
             while ((fila = br.readLine()) != null) {
                 String[] c = fila.split(";");
                 Alumno a = new Alumno(Integer.parseInt(c[0]),
-                                          c[1],Integer.parseInt(c[2]),
-                                          Double.parseDouble(c[3]));
+                                      c[1],Integer.parseInt(c[2]),
+                                      Double.parseDouble(c[3]));
                 alumnos_al.add(a);
             }
         }catch(IOException e) {
