@@ -13,5 +13,4 @@ public class Principal1 {
             coche.imprimirTabla();
         }
     }
-
 }
