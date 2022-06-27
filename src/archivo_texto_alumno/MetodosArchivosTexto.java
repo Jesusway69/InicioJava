@@ -1,4 +1,4 @@
-package archivo_texto;
+package archivo_texto_alumno;
 
 import java.io.BufferedReader;
 import java.io.File;
