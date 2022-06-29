@@ -1,8 +1,10 @@
 package sql_alumno2;
 
 import java.io.IOException;
+import java.sql.Connection;
 import java.util.List;
 import sql_alumno1.Alumno;
+import sql_alumno1.ConexionMariadb;
 import sql_alumno1.OperacionesCrud;
 
 public class Opcion {
@@ -93,7 +95,8 @@ public class Opcion {
                         System.out.println("ERROR: ELIMINAR REGISTRO ALUMNO POR SU IDENTIFICADOR");
                     }
                     break;
-                case -1: System.out.println("ERROR: METODO EXISTE ALUMNO(SQL)");
+                case -1:
+                    System.out.println("ERROR: METODO EXISTE ALUMNO(SQL)");
             }
         } else {
             System.out.println("ERROR CONEXION");
@@ -104,9 +107,34 @@ public class Opcion {
 
     public static void opcion5() {
         cls();
-        System.out.println("2. BUSCAR REGISTRO POR SU NOMBRE");
-        System.out.println("--------------------------------");
-        //PROCESO
+        System.out.println("5. ACTUALIZAAR REGISTRO ALUMNO");
+        System.out.println("------------------------------");
+        if (OperacionesCrud.miconexion() != null) {
+            int idAlumno = Entrada.entradaNumeroEntero("Ingrese Identificador? ");
+            Alumno alumno = new Alumno(idAlumno, nombre, edad, estatura);
+            switch (x) {
+                case 0:
+                    System.out.println("NO EXISTE EL ALUMNO");
+                    break;
+                case 1:
+                    String nombre = Entrada.entradaCadena("Ingrese nombre? ");
+                    int edad = Entrada.entradaNumeroEntero("Ingrese edad? ");
+                    double estatura = Entrada.entradaNumeroReal("Ingrese estatura? ");
+                    int x = OperacionesCrud.existeAlumno(idAlumno, OperacionesCrud.miconexion());
+
+                    if (OperacionesCrud.actualizar(alumno, OperacionesCrud.miconexion()) == 1) {
+                        System.out.println("OK: ACTUALIZAR");
+                    } else {
+                        System.out.println("ERROR: ACTUALIZAR");
+                    }
+                    break;
+                default:
+                    System.out.println("ERROR: EXISTE ALUMNO(SQL)");
+                    break;
+            }
+        } else {
+            System.out.println("ERROR: CONEXION");
+        }
         pause();
     }
 

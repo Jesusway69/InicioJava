@@ -100,12 +100,13 @@ public class OperacionesCrud {
      * @return
      */
     public static int actualizar(Alumno alumno, Connection conexion) {
-        String query = "UPDATE Alumno SET nombre = ?, estatura = ? WHERE idAlumno = ?";
+        String query = "UPDATE Alumno SET nombre = ?, edad = ?, estatura = ? WHERE idAlumno = ?";
         try {
             PreparedStatement ps = conexion.prepareStatement(query);
             ps.setString(1, alumno.getNombre());
-            ps.setDouble(2, alumno.getEstatura());
-            ps.setInt(3, alumno.getIdAlumno());
+            ps.setInt(2, alumno.getEdad());
+            ps.setDouble(3, alumno.getEstatura());
+            ps.setInt(4, alumno.getIdAlumno());
             ps.executeUpdate();
         } catch (SQLException ex) {
             return -1;
