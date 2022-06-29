@@ -3,7 +3,24 @@ package sql_alumno2;
 import java.util.Scanner;
 
 public class Entrada {
-        public static int entradaNumeroEntero(String mensaje) {
+
+    public static String entradaCadena(String mensaje) {
+        Scanner sc = new Scanner(System.in);
+        String er = "[a-zA-Z]+";
+        String sCadena;
+        boolean correcto;
+        do {
+            System.out.print(mensaje);
+            sCadena = sc.next();
+            correcto = sCadena.matches(er);
+            if (!correcto) {
+                System.out.println("Error vuelva a ingresar el dato");
+            }
+        } while (!correcto);
+        return sCadena;
+    }
+
+    public static int entradaNumeroEntero(String mensaje) {
         Scanner sc = new Scanner(System.in);
         String er = "[0-9]+";
         String sNumeroEntero;

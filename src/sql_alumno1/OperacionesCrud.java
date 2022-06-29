@@ -6,8 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class OperacionesCrud {
 
@@ -141,20 +139,73 @@ public class OperacionesCrud {
                 String nombre = rs.getString(2);
                 int edad = rs.getInt(3);
                 double estatura = rs.getDouble(4);
-                Alumno a = new Alumno(idAlumno,nombre,edad,estatura);
+                Alumno a = new Alumno(idAlumno, nombre, edad, estatura);
                 /*
                 Alumno a = new Alumno(rs.getInt(1),
                                        rs.getString(2),
                                        rs.getInt(3),
                                        rs.getDouble(4));
-                */
+                 */
                 alumnos_al.add(a);
             }
         } catch (SQLException ex) {
             return null;
         }
         return alumnos_al;
+    }
 
+    public static List<Alumno> buscarRegistroAlumno(String nombreBuscar, Connection conexion) {
+        List<Alumno> alumnos_al = new ArrayList<Alumno>();
+        String query = "SELECT * FROM Alumno WHERE nombre = ?";
+        try {
+            PreparedStatement ps = conexion.prepareStatement(query);
+            ps.setString(1, nombreBuscar);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                int idAlumno = rs.getInt(1);
+                String nombre = rs.getString(2);
+                int edad = rs.getInt(3);
+                double estatura = rs.getDouble(4);
+                Alumno a = new Alumno(idAlumno, nombre, edad, estatura);
+                /*
+                Alumno a = new Alumno(rs.getInt(1),
+                                       rs.getString(2),
+                                       rs.getInt(3),
+                                       rs.getDouble(4));
+                 */
+                alumnos_al.add(a);
+            }
+        } catch (SQLException ex) {
+            return null;
+        }
+        return alumnos_al;
+    }
+
+    public static Alumno buscarRegistroAlumno(int idAlumnoBuscar, Connection conexion) {
+        String query = "SELECT * FROM Alumno WHERE idAlumno = ?";
+        try {
+            PreparedStatement ps = conexion.prepareStatement(query);
+            ps.setInt(1, idAlumnoBuscar);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                int idAlumno = rs.getInt(1);
+                String nombre = rs.getString(2);
+                int edad = rs.getInt(3);
+                double estatura = rs.getDouble(4);
+                Alumno alumno = new Alumno(idAlumno, nombre, edad, estatura);
+                return alumno;
+            }
+            return new Alumno(0,"",0,0.0);
+        } catch (SQLException ex) {
+            return null;
+        }
+    }
+
+    public static Connection miconexion() {
+        ConexionMariadb cm = new ConexionMariadb();
+        cm.setConexion("instituto", "root", "");
+        Connection conexion = cm.getConexion();
+        return conexion;
     }
 
 }
