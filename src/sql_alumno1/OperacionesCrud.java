@@ -1,4 +1,4 @@
-package sql_alumno;
+package sql_alumno1;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -89,11 +89,10 @@ public class OperacionesCrud {
         try {
             PreparedStatement ps = conexion.prepareStatement(query);
             ps.setString(1, nombre);
-            ps.executeUpdate();
+            return ps.executeUpdate();
         } catch (SQLException ex) {
             return -1;
         }
-        return 1;
     }
 
     /**

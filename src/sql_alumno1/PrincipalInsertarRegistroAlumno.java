@@ -1,8 +1,8 @@
-package sql_alumno;
+package sql_alumno1;
 
 import java.sql.Connection;
 
-public class Principal1 {
+public class PrincipalInsertarRegistroAlumno {
 
     public static void main(String[] args) {
 

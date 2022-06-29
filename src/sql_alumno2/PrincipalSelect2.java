@@ -1,16 +1,18 @@
-package sql_alumno;
+package sql_alumno2;
 
-import java.sql.*;
-import java.util.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
-public class PrincipalBuscarAlumno {
+public class PrincipalSelect2 {
 
     public static void main(String[] args) {
-        //CANDENA DE CONEXION
-        String url = "jdbc:mysql://127.0.0.1:3306/instituto"; //Protocolo,NombreServidor,Puerto,BaseDatos
         try {
+            String url = "jdbc:mysql://localhost:3306/instituto";
             Connection conexion = DriverManager.getConnection(url, "root", "");
-            String query = "SELECT * FROM Alumno WHERE idAlumno = 15";
+            String query = "SELECT * FROM Alumno";
             PreparedStatement ps = conexion.prepareStatement(query);
             ResultSet rs = ps.executeQuery();
             boolean bandera = false;
@@ -21,9 +23,13 @@ public class PrincipalBuscarAlumno {
                         + rs.getDouble(4));
                 bandera = true;
             }
-            if(bandera == false) System.out.println("NO EXISTE ALUMNO");
-        } catch (SQLException ex) {
-            System.out.println("ERROR");
+            if (bandera == false) {
+                System.out.println("NO EXISTE ALUMNO");
+            }
+        } catch (SQLException e) {
+            System.out.println("ERROR: \n" + e.getMessage());
         }
+
     }
+
 }

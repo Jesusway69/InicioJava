@@ -1,4 +1,4 @@
-package sql_alumno;
+package sql_alumno1;
 
 
 public class Alumno {

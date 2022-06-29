@@ -19,6 +19,8 @@ public class Principal1 {
             System.out.println(nombre);
         }
         
+        List<String> nombres_al = new ArrayList<String>(nombres_ts);
+        
         //Generar 300 números aleatorios entre [100,1000]
         //Mostrar los números distintos generados
         

@@ -1,8 +1,8 @@
-package sql_alumno;
+package sql_alumno1;
 
 import java.sql.Connection;
 
-public class PrincipalActualizar {
+public class PrincipalActualizarRegistroAlumno {
 
     public static void main(String[] args) {
         ConexionMariadb cm = new ConexionMariadb();
