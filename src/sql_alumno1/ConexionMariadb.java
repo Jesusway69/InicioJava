@@ -11,7 +11,7 @@ public class ConexionMariadb {
         try {
             conexion = DriverManager.getConnection(url, usuario, clave);
         } catch (SQLException e) {
-            //System.out.println(e.getMessage());
+            System.out.println(e.getMessage());
         }
     }
 

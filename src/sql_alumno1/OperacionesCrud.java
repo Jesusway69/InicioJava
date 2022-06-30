@@ -44,7 +44,7 @@ public class OperacionesCrud {
         String nombre = alumno.getNombre();
         int edad = alumno.getEdad();
         double estatura = alumno.getEstatura();
-        String query = "INSERT INTO Alumno (idAlumno, nombre, edad, estatura) VALUES (NULL,?,?,?)";
+        String query = "INSERT INTO Alumn (idAlumno, nombre, edad, estatura) VALUES (NULL,?,?,?)";
         try {
             PreparedStatement ps = conexion.prepareStatement(query);
             ps.setString(1, nombre);
@@ -129,9 +129,21 @@ public class OperacionesCrud {
         }
     }
 
-    public static List<Alumno> retornaColeccionAlumnos(Connection conexion) {
+    public static List<Alumno> retornarTodosRegistrosTablaAlumno(Connection conexion, int opcion) {
         List<Alumno> alumnos_al = new ArrayList<Alumno>();
-        String query = "SELECT * FROM Alumno";
+        String query1 = "SELECT * FROM Alumno";
+        String query2 = "SELECT * FROM Alumno ORDER BY nombre";
+        String query3 = "SELECT * FROM Alumno ORDER BY nombre DESC";
+        String query = "";
+        if (opcion == 1) {
+            query = query1;
+        }
+        if (opcion == 2) {
+            query = query2;
+        }
+        if (opcion == 3) {
+            query = query3;
+        }
         try {
             PreparedStatement ps = conexion.prepareStatement(query);
             ResultSet rs = ps.executeQuery();
@@ -196,7 +208,7 @@ public class OperacionesCrud {
                 Alumno alumno = new Alumno(idAlumno, nombre, edad, estatura);
                 return alumno;
             }
-            return new Alumno(0,"",0,0.0);
+            return new Alumno(0, "", 0, 0.0);
         } catch (SQLException ex) {
             return null;
         }

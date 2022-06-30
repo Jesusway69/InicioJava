@@ -1,5 +1,6 @@
 package sql_alumno2;
 
+import sql_alumno3.Entrada;
 import sql_alumno1.Alumno;
 import sql_alumno1.OperacionesCrud;
 

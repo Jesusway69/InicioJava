@@ -10,7 +10,7 @@ public class PrincipalMostrarTodosRegistroTablaAlumno {
         cm.setConexion("instituto", "root", "");
         Connection conexion = cm.getConexion();
         if (conexion != null) {
-            List<Alumno> alumnos_al = OperacionesCrud.retornaColeccionAlumnos(conexion);
+            List<Alumno> alumnos_al = OperacionesCrud.retornarTodosRegistrosTablaAlumno(conexion,1);
             Alumno.cabecera();
             for (Alumno alumno : alumnos_al) {
                 alumno.imprimir();

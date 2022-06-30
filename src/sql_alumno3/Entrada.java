@@ -1,4 +1,4 @@
-package sql_alumno2;
+package sql_alumno3;
 
 import java.util.Scanner;
 
