@@ -6,7 +6,7 @@ public class Entrada {
 
     public static String entradaCadena(String mensaje) {
         Scanner sc = new Scanner(System.in);
-        String er = "[a-zA-Z]+";
+        String er = "[a-zA-Z0-9]+";
         String sCadena;
         boolean correcto;
         do {

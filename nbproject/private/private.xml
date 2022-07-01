@@ -11,21 +11,6 @@
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/RYZEN/Documents/NetBeansProjects/INICIOJAVA/src/sql_alumno2/PrincipalSelect1.java</file>
-            <file>file:/C:/Users/RYZEN/Documents/NetBeansProjects/INICIOJAVA/src/sql_alumno2/Opcion.java</file>
-            <file>file:/C:/Users/RYZEN/Documents/NetBeansProjects/INICIOJAVA/src/libreria/MisMetodos.java</file>
-            <file>file:/C:/Users/RYZEN/Documents/NetBeansProjects/INICIOJAVA/src/sql_alumno1/ConexionMariadb.java</file>
-            <file>file:/C:/Users/RYZEN/Documents/NetBeansProjects/INICIOJAVA/src/sql_alumno1/PrincipalActualizarRegistroAlumno.java</file>
-            <file>file:/C:/Users/RYZEN/Documents/NetBeansProjects/INICIOJAVA/src/sql_alumno2/PrincipalInsert2.java</file>
-            <file>file:/C:/Users/RYZEN/Documents/NetBeansProjects/INICIOJAVA/src/sql_alumno1/Alumno.java</file>
-            <file>file:/C:/Users/RYZEN/Documents/NetBeansProjects/INICIOJAVA/src/sql_alumno2/PrincipalMenu.java</file>
-            <file>file:/C:/Users/RYZEN/Documents/NetBeansProjects/INICIOJAVA/src/sql_alumno1/OperacionesCrud.java</file>
-            <file>file:/C:/Users/RYZEN/Documents/NetBeansProjects/INICIOJAVA/src/sql_alumno2/index.txt</file>
-            <file>file:/C:/Users/RYZEN/Documents/NetBeansProjects/INICIOJAVA/src/sql_alumno2/Entrada.java</file>
-            <file>file:/C:/Users/RYZEN/Documents/NetBeansProjects/INICIOJAVA/src/sql_alumno2/PrincipalInsert.java</file>
-            <file>file:/C:/Users/RYZEN/Documents/NetBeansProjects/INICIOJAVA/src/sql_alumno2/PrincipalSelect2.java</file>
-            <file>file:/C:/Users/RYZEN/Documents/NetBeansProjects/INICIOJAVA/src/sql_alumno1/bd_instituto.sql</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

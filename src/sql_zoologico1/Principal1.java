@@ -13,7 +13,7 @@ public class Principal1 {
     public static void main(String[] args) {
         try {
             Connection conexion = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/zoologico", "root", "");
-            String query = "SELEC z.ciudad,a.idAnimal, e.nombreVulgar FROM Zoologico z, Animal a, Especie e WHERE z.idZoo=a.idZoo AND e.idEspecie=a.idEspecie GROUP BY z.ciudad,a.idAnimal";
+            String query = "SELECT z.ciudad,a.idAnimal, e.nombreVulgar FROM Zoologico z, Animal a, Especie e WHERE z.idZoo=a.idZoo AND e.idEspecie=a.idEspecie GROUP BY z.ciudad,a.idAnimal";
             PreparedStatement ps = conexion.prepareStatement(query);
             ResultSet rs = ps.executeQuery();
             System.out.printf("%-15s %8s %-15s\n", "CIUDAD", "IDANIMAL", "NOMBRE VULGAR");
