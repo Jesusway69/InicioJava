@@ -119,10 +119,32 @@ public class Principal1 {
         System.out.println("===================================");
         System.out.println();
 
+        Libro.cabecera();
+        for(int i=0; i<libros_al.size(); i++) {
+            Libro libro = libros_al.get(i);
+            String titulo = libro.getTitulo();
+            String[] c = titulo.split(" ");
+            String er = "(Java\\s[0-9]*)";
+            for(int j=0; j<c.length; j++) {
+                if(c[j].toLowerCase().trim().equalsIgnoreCase("java")) {
+                   libro.imprimir();
+                   break;
+                }
+            }
+        }
+        
+        String str = "Introducción A Java8";
+        String c = "Java 8999";
+        boolean correcto = c.matches("(Java)(\\s||[0-9]+)");
+        System.out.println(correcto);
+        
+        
+        /*
         String str = "Introducción Java";
         String subStr = "Java";
         boolean containsStr = str.contains(subStr);
         System.out.println(containsStr);
+        */
 
     }
 }
